@@ -13,6 +13,16 @@ public class MainConta {
 		System.out.println("Novo Saldo: R$ " + contaComum.sacar(1000));
 		
 		System.out.println("\nEXTRATO\n" + contaComum.emitirSaldo());
+		
+		
+		Conta contaComum2 = new Conta("100012-1", "senha");
+		
+		System.out.println("\nINFORMAÇÕES DA CONTA");
+		System.out.println(contaComum2.toString());
+		
+		contaComum2.setSaldoConta(2399);
+		
+		System.out.println("\nEXTRATO\n" + contaComum2.emitirSaldo());
 	}
 
 }

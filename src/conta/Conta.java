@@ -3,12 +3,18 @@ package conta;
 public class Conta implements ContaInterface{
 	protected String numeroConta;
 	protected String senhaConta;
-	protected double saldoConta = 0;
+	protected double saldoConta;
 	
 	Conta(String numeroConta, String senhaConta, double saldoConta){
 		this.numeroConta = numeroConta;
 		this.senhaConta = senhaConta;
 		this.saldoConta = saldoConta;
+	}
+	
+	Conta(String numeroConta, String senhaConta){
+		this.numeroConta = numeroConta;
+		this.senhaConta = senhaConta;
+		this.saldoConta = 0;
 	}
 	
 	public String getNumeroConta() {
