@@ -3,7 +3,7 @@ package conta;
 public class Conta implements ContaInterface{
 	protected String numeroConta;
 	protected String senhaConta;
-	protected double saldoConta;
+	protected double saldoConta = 0;
 	
 	Conta(String numeroConta, String senhaConta, double saldoConta){
 		this.numeroConta = numeroConta;
