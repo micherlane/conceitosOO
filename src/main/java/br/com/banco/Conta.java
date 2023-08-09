@@ -35,16 +35,13 @@ public class Conta implements ContaInterface{
 	public void setSaldoConta(double saldoConta) {
 		this.saldoConta = saldoConta;
 	}
-	
-	public String emitirSaldo() {
-		return "Nº Conta: " + this.numeroConta + "\nSaldo: R$ " + this.saldoConta;
-	}
-	
-	
 	@Override
 	public String toString() {
 		return "numeroConta:" + numeroConta + "\nsenhaConta:" + senhaConta + "\nsaldoConta: R$ " + saldoConta;
 	}
+	public String emitirSaldo() {
+		return "Nº Conta: " + this.numeroConta + "\nSaldo: R$ " + this.saldoConta;
+	}	
 
 	public double depositar(double valor) {
 		// Se o valor for negativo, o valor do saldo é 
