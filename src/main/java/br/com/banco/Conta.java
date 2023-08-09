@@ -1,4 +1,4 @@
-package conta;
+package br.com.banco;
 
 public class Conta implements ContaInterface{
 	protected String numeroConta;

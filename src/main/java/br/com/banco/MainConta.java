@@ -1,4 +1,4 @@
-package conta;
+package br.com.banco;
 
 public class MainConta {
 

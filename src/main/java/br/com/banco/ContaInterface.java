@@ -1,4 +1,4 @@
-package conta;
+package br.com.banco;
 
 public interface ContaInterface {
 	public String emitirSaldo();
