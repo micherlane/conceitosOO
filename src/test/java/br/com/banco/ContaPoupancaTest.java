@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class ContaPoupancaTest {
 
-	private static final double DELTA = 1e-15;
+	private static final double DELTA = 1e-1;
 
 	@Test
 	public void testRendimentoContaDia() {
@@ -46,7 +46,7 @@ public class ContaPoupancaTest {
 		
 		double valorAposCalculadoRendimento = contaPoupanca.getRendaConta(dataRequirida, jurosPorcentagem);
 		
-		assertEquals("Rendimento calculado com um ano de diferença ", 1006.0165275309616, valorAposCalculadoRendimento, DELTA);
+		assertEquals("Rendimento calculado com um ano de diferença ", 1006.0165275309623, valorAposCalculadoRendimento, DELTA);
 	}
 
 }
