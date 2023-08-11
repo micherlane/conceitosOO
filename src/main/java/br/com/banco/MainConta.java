@@ -54,6 +54,21 @@ public class MainConta {
 		LocalDate data = LocalDate.of(2025, 8, 9);	
 		System.out.println("Valor rendido no período R$ " + formatMoeda.format(contaPoupanca.getRendaConta(data, 0.5)));
 		
+		
+		System.out.println("Novo Cliente");
+		Cliente cliente = new Cliente("José", "11111111-1");
+		System.out.println(cliente.toString());
+		
+		System.out.println("\nAdicionando contas ao cliente");
+		cliente.addConta(contaPoupanca);
+		cliente.addConta(contaEspecial);
+		cliente.addConta(contaComum);
+		System.out.println(cliente.toString());
+		
+		System.out.println("\nRemovendo contas do cliente");
+		cliente.removeConta("10001-1");
+		System.out.println(cliente.toString());
+		
 	}
 
 }

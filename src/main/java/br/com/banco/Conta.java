@@ -37,7 +37,7 @@ public class Conta implements ContaInterface{
 	}
 	@Override
 	public String toString() {
-		return "numeroConta:" + numeroConta + "\nsenhaConta:" + senhaConta + "\nsaldoConta: R$ " + saldoConta;
+		return "Conta [numeroConta:" + numeroConta + "\nsenhaConta:" + senhaConta + "\nsaldoConta: R$ " + saldoConta + "]";
 	}
 	public String emitirSaldo() {
 		return "Nº Conta: " + this.numeroConta + "\nSaldo: R$ " + this.saldoConta;

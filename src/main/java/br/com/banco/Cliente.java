@@ -1,8 +1,11 @@
 package br.com.banco;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private String nome;
     private String cpf;
+    private ArrayList<Conta> contas = new ArrayList<Conta>();
 
 
     public Cliente(String nome, String cpf) {
@@ -11,20 +14,34 @@ public class Cliente {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
-    public static void registrarCliente(String nome, String cpf) {
-        Cliente novoCliente = new Cliente(nome, cpf);
-        clientesRegistrados.put(cpf, novoCliente);
-        System.out.println("Cliente registrado: " + nome + " (CPF: " + cpf + ")");
+	public ArrayList<Conta> getConta() {
+		return this.contas;
+	}
+    
+    public void addConta(Conta conta) {
+    	this.contas.add(conta);
+    }
+    
+    public Conta removeConta(String numeroConta) {
+    	for(Conta conta: this.contas) {
+    		if(conta.numeroConta == numeroConta) {
+    			this.contas.remove(conta);
+    			return conta;
+    		}
+    	}
+    	return null;
     }
 
-    public static Cliente consultarCpf(String cpf) {
-        return clientesRegistrados.get(cpf);
-    }
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", cpf=" + cpf + ", \ncontas=" + contas + "]";
+	}
+   
 }
